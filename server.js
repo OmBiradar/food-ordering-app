@@ -20,7 +20,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // routes
-app.use('/api/v1/test', require("./routes/testRoutes"))
+app.use('/api/v1/test', require("./routes/testRoutes"));
+app.use('/api/v1/auth', require("./routes/authRoutes"));
 
 app.get('/', (req, res) => {
     return res.status(200).send("<h1>Welcome to html</h1>"); // OK

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 // schema
 const userSchema = new mongoose.Schema(
     {
-        userName: {
+        username: {
             type: String,
             required: [true, "username is required"],
         },
@@ -38,6 +38,8 @@ const userSchema = new mongoose.Schema(
     }
 );
 
+// model
+const userModel = mongoose.model('User', userSchema);
 
 // export
-module.exports = {'User': userSchema};
+module.exports = userModel;
